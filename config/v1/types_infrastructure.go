@@ -172,6 +172,11 @@ type BareMetalPlatformStatus struct {
 	// datacenter DNS, a DNS service is hosted as a static pod to serve those hostnames
 	// to the nodes in the cluster.
 	NodeDNSIP string `json:"nodeDNSIP,omitempty"`
+
+	// region is the region of the baremetal deployment. Useful to filter multiple baremetal
+	// deployments.
+	// +optional
+	Region string `json:"region"`
 }
 
 // OpenStackPlatformStatus holds the current status of the OpenStack infrastructure provider.
