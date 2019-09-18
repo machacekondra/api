@@ -173,7 +173,9 @@ type BareMetalPlatformStatus struct {
 	// to the nodes in the cluster.
 	NodeDNSIP string `json:"nodeDNSIP,omitempty"`
 
-	// Region is the region of the baremetal machine
+	// region is the region of the baremetal deployment. Useful to filter multiple baremetal
+	// deployments.
+	// +optional
 	Region string `json:"region"`
 }
 
